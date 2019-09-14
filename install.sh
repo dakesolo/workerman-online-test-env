@@ -1,7 +1,7 @@
 yum update -y && yum -y install wget pcre pcre-devel openssl openssl-devel libicu-devel gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel ncurses ncurses-devel curl curl-devel krb5-devel libidn libidn-devel openldap openldap-devel nss_ldap jemalloc-devel cmake boost-devel bison automake libevent libevent-devel gd gd-devel libtool* libmcrypt libmcrypt-devel mcrypt mhash libxslt libxslt-devel readline readline-devel gmp gmp-devel libcurl libcurl-devel openjpeg-devel && yum clean all
 
 cd /tmp
-wget -q https://raw.githubusercontent.com/dakesolo/workerman-online-test-env/master/package/php-7.2.22.tar.gz -O - | tar -zxf -
+wget https://raw.githubusercontent.com/dakesolo/workerman-online-test-env/master/package/php-7.2.22.tar.gz -O - | tar -zxf -
 cd /tmp/php-7.2.22 && \
        ./configure --prefix=/usr/local/php \
 	   --with-config-file-path=/usr/local/php/etc \
@@ -60,7 +60,7 @@ cd /tmp/event-2.5.3 && \
 	rm -rf /tmp/event-2.5.3
 
 cd /tmp
-wget -q https://raw.githubusercontent.com/dakesolo/workerman-online-test-env/master/package/redis-5.0.2.tgz -O - | tar -zxf -
+wget https://raw.githubusercontent.com/dakesolo/workerman-online-test-env/master/package/redis-5.0.2.tgz -O - | tar -zxf -
 redis-5.0.2.tgz /tmp/
 cd /tmp/redis-5.0.2 && \
     /usr/local/php/bin/phpize && \
@@ -69,4 +69,4 @@ cd /tmp/redis-5.0.2 && \
     echo extension=redis.so >> /usr/local/php/etc/php.ini && \
 	rm -rf /tmp/redis-5.0.2
 
-mkdir -p /home/wwwroot
+mkdir /home/wwwroot

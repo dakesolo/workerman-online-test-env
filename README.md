@@ -1,2 +1,2 @@
 ## Install
-curl -sfL https://raw.githubusercontent.com/dakesolo/workerman-online-env/master/install.sh | sh -
+curl -sfL https://raw.githubusercontent.com/dakesolo/workerman-online-test-env/master/install.sh | sh -
